@@ -5,6 +5,7 @@ import { myContext } from "./Context/ContextProvider";
 import SnackBar from "./MiniComponents/Snackbar";
 import { PureComponent } from "./PureComponent";
 import ReduxExample from "./ReduxExample";
+import ReduxExampleReduxToolKit from "./ReduxExampleReduxToolKit";
 import ReturnJsx from "./ReturnJsx";
 interface Props {
     
@@ -20,9 +21,10 @@ const RootComponent: FunctionComponent<Props> = () => {
             <Link to={'/lazy'}>
                 Click to LazyLoad LazyLoadComponent
             </Link>
-            <ReduxExample/>
+            {/* <ReduxExample/> */}
             <SnackBar timeout={3000}/>
             <div onClick={()=>myC?.setAge()}> {myC?.age}</div >
+            <ReduxExampleReduxToolKit/>
 
             
         </>

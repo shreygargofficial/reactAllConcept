@@ -14,9 +14,12 @@ import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { myCombineReducers } from "./Reducer/CombineReducer";
 import { ContextProvider } from "./components/Context/ContextProvider";
+import { mySlice } from "./Slice/CombineSlice";
 const MyLazyComponent = lazy(() => import("./components/LazyLoadMe"));
 
-const store = configureStore({ reducer: myCombineReducers });
+// const store = configureStore({ reducer: myCombineReducers });
+const store = configureStore({ reducer: mySlice });
+
 function App() {
   return (
     <div className="App">
