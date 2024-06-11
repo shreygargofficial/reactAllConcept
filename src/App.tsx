@@ -15,6 +15,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import { myCombineReducers } from "./Reducer/CombineReducer";
 import { ContextProvider } from "./components/Context/ContextProvider";
 import { mySlice } from "./Slice/CombineSlice";
+import Post from "./components/Post";
+import NewPost from "./components/NewPost";
+import OldPost from "./components/OldPost";
 const MyLazyComponent = lazy(() => import("./components/LazyLoadMe"));
 
 // const store = configureStore({ reducer: myCombineReducers });
@@ -45,7 +48,11 @@ function App() {
                   />
 
                   <Route path="/lazy" element={<MyLazyComponent />} />
-
+                  <Route path = '/nestedpost' element={<Post/>}>
+                    <Route path="new" element={<NewPost/>}/>
+                    <Route path="old" element={<OldPost/>}/>
+                    
+                  </Route>
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

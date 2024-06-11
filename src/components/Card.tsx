@@ -10,7 +10,7 @@ const Card: FunctionComponent<Props> = ({ product }) => {
   const [moreStatus, setMoreStatus] = useState(false as boolean);
 
   const handleMore = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     setMoreStatus((status) => !status);
   };
 

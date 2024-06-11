@@ -2,7 +2,7 @@
 import * as React from "react";
 import { JsxElement } from "typescript";
 type Props = {
-    children : any
+    children : JSX.Element
 };
 type State = {
   hasError: boolean;

@@ -1,6 +1,8 @@
 import React, { FunctionComponent, useState } from "react";
 
-interface Props {}
+interface Props {
+  name: string
+}
 
 const ReturnJsx: FunctionComponent<Props> = ():JSX.Element => {
   const [value, setValue] = useState(0);
@@ -9,7 +11,7 @@ const ReturnJsx: FunctionComponent<Props> = ():JSX.Element => {
 
     setValue(+e.target.value);
   };
-
+  console.log("Helo")
   const returnJSXArray = (): JSX.Element[] => {
     let ar = new Array(value).fill(0);
 
@@ -38,4 +40,4 @@ const ReturnJsx: FunctionComponent<Props> = ():JSX.Element => {
   );
 };
 
-export default ReturnJsx;
+export default React.memo(ReturnJsx);
