@@ -1,7 +1,5 @@
 function NewPost() {
-    return ( <h2>
-        New Post
-    </h2> );
+  return <h2>New Post</h2>;
 }
 
 export default NewPost;

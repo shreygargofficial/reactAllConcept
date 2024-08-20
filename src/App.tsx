@@ -18,6 +18,7 @@ import { mySlice } from "./Slice/CombineSlice";
 import Post from "./components/Post";
 import NewPost from "./components/NewPost";
 import OldPost from "./components/OldPost";
+import HookFormExample from "./components/HookFormExample";
 const MyLazyComponent = lazy(() => import("./components/LazyLoadMe"));
 
 // const store = configureStore({ reducer: myCombineReducers });
@@ -37,6 +38,7 @@ function App() {
                     path="/class"
                     element={<ClassTest myColor={"green"} />}
                   />
+                  <Route path="/form" element={<HookFormExample/>}/>
                   <Route path="/function" element={<FunctionTest />} />
                   <Route
                     path="/function/products/:id"

@@ -7,7 +7,36 @@ input[type="number"],input[type="text"],input[type="email"],input[type="password
     font-size: 14px;
     
 }
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-right: 2px;
+    margin-top: 2px;
 
+
+}
+.err{
+    color:red;
+}
+button[type="submit"]{
+    background-color: red;
+    color: #ccc;
+    padding: 20px 40px;
+}
+.nonvalid{
+    background-color: black;
+    color: #ccc;
+}
+button[type="submit"]:disabled{
+    background-color: gray;
+}
+.flex{
+    display: flex;
+    width: 100%;
+    flex-wrap:wrap;
+
+}
 .closeSnackbar{
     display: none;
 }
